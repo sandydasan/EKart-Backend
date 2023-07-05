@@ -1,0 +1,48 @@
+                                                E-cart Backend Notes
+                                            --------------------------
+
+                    1. create package.json -> npm init -y
+                    2. Install some libraries -> npm i express cors mongoose dotenv
+                    => dotenv - Enviornment varianbles are used to store app secret and configuration 
+                       data which are retrived by the running app when needed.
+                       Types
+                       => 1. SystemEnviornment variables(s/m path)
+                       => 2. User Enviornment variables(Admin)
+                       => 3. Runtime/process variables(Application running process)
+
+                       3. Create .env Files
+                       4. create .gitignore
+                       5. Add node_modules and .env in .gitignore
+                       6. create index.js
+                       7. in index.js file ,
+                         =>import express,cors,dotenv
+                         =>create an app using express
+                         =>use cors and express.json() in server app
+                         =>Define port number
+
+                         MONGODB ATLAS configuration
+                         ----------------------------
+                1 . copy connection string from atlas and paste it into .env file
+                2 . create a db folder in server , inside create a connecton.js
+                3 . in connection.js file import mongoose
+                4 . get db connection string from .env file
+                5 . use mondoose to connect mongodb with node.js
+                6 . import connection.js in index.js 
+                7 . create a model in server
+                8 . create a model/collection to store product in model folder
+                9 . export model
+               10 . create a router for client request - create a routes folder, inside it create a router.js 
+                     -> . Inside router.js file import express
+                     -> . usind express create an object for router class inorder to set a path 
+                     -> . resolve client request in various server routes 
+
+               11 . create controller folder inorder to define logic to resolve client request
+                     ->controller(folder)
+                        -productController.js
+                        -cartController.js
+                        -wishlistController.js
+
+                      ->Inside productController file
+                       - import product collection
+                       -define logic to resolve client request
+                         
